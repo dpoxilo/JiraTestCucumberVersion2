@@ -53,10 +53,8 @@ public class MainPageSteps extends MainPage {
     }
 
     //Assert
-    @Тогда("^статус и версия имеют верные значения")
-    public static void mainPageAssertion(List<String> testdata) {
-        String status = testdata.get(0);
-        String version = testdata.get(1);
+    @Тогда("^статус и версия имеют верные значения \"(.*)\", \"(.*)\"")
+    public static void mainPageAssertion(String status, String version) {
         findText.shouldBe(visible, Duration.ofSeconds(60));
         checkStatus.shouldHave(text(status));
         versionCheck.shouldHave(text(version));
