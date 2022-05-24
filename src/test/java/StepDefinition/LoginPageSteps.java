@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPageSteps extends LoginPage {
     @Дано("^открываем сайт учебного баг-трекера")
-    public static  void openLink() {
+    public static void openLink() {
         open("https://edujira.ifellow.ru/");
     }
 
